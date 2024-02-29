@@ -20,18 +20,18 @@ def main():
         st.error("Falha na autenticação. Token inválido.")
 
 def painel():
-    # df = pd.read_excel("dados_pesquisa.xlsx");
+    df = pd.read_excel("dados_pesquisa.xlsx");
     # Conectar ao banco de dados
-    conn = pyodbc.connect('DRIVER={SQL Server};SERVER=10.236.2.56;DATABASE=CAD;UID=qlik_integra;PWD=qlik_integra')
+    # conn = pyodbc.connect('DRIVER={SQL Server};SERVER=10.236.2.56;DATABASE=CAD;UID=qlik_integra;PWD=qlik_integra')
 
-    # Query SQL
-    query = "SELECT * FROM pmerj_ocorrencias.vw_qlik_pesq_satisfacao"
+    # # Query SQL
+    # query = "SELECT * FROM pmerj_ocorrencias.vw_qlik_pesq_satisfacao"
 
-    # Executar a consulta e carregar os dados no pandas
-    df = pd.read_sql(query, conn)
+    # # Executar a consulta e carregar os dados no pandas
+    # df = pd.read_sql(query, conn)
 
-    # Fechar a conexão com o banco de dados
-    conn.close();
+    # # Fechar a conexão com o banco de dados
+    # conn.close();
 
     # Configurações da página
     st.set_page_config(layout='wide', page_title="Pesquisa de Satisfação")
